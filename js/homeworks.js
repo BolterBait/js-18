@@ -847,573 +847,64 @@
 //   },
 // };
 // atTheOldToad.updatePotionName('Dragon breath', 'Polymorth');
-// const atTheOldToad = {
-//   potions: [
-//     { name: 'Speed potion', price: 460 },
-//     { name: 'Dragon breath', price: 780 },
-//     { name: 'Stone skin', price: 520 },
-//   ],
-//   // Change code below this line
-
-//   getPotions() {
-//     console.log(this.potions);
-//     return this.potions;
-//   },
-//   addPotion(newPotion) {
-//     for (const potion of this.potions) {
-//       if (this.potions.name !== newPotion.name) {
-//         this.potions.push(newPotion);
-//       }
-//       return `Error! Potion ${newPotion.name} is already in your inventory!`;
-//     }
-//   },
-// removePotion(potionName) {
-//   for (const potion of this.potions) {
-//     if (potion.name === potionName) {
-//       if (this.potions.includes(potion)) {
-//         const potionIndex = this.potions.indexOf(potion);
-
-//         return this.potions.splice(potionIndex, 1);
-//       }
-//     }
-//   }
-//   return `Potion ${potionName} is not in inventory!`;
-
-//   const { potions } = this;
-//   for (let i = 0; i < potions.length; i++) {
-//     const potion = potions[i];
-//     if (potionName === potion.name) {
-//       potions.splice(i, 1);
-//     }
-//   }
-// },
-// updatePotionName(oldName, newName) {
-//   for (const potion of this.potions) {
-//     if (potion.name === oldName) {
-//       potion.name = newName;
-//     }
-//   }
-// const potionIndex = this.potions.indexOf[`oldName`];
-// console.log(potionIndex);
-// if (potionIndex === -1) {
-// return `Potion ${oldName} is not in inventory!`;
-// }
-
-// this.potions.splice[`potionIndex, 1, newName`];
-// console.log(atTheOldToad.thisPotions);
-// },
-
-// Change code above this line
-// };
-// const atTheOldToad = {
-//   potions: [
-//     { name: 'Speed potion', price: 460 },
-//     { name: 'Dragon breath', price: 780 },
-//     { name: 'Stone skin', price: 520 },
-//   ],
-//   // Change code below this line
-//   getPotions() {
-//     console.log(this.potions);
-//     return this.potions;
-//   },
-//   addPotion(newPotion) {
-//     for (const potion of this.potions) {
-//       if (potion.name === newPotion.name) {
-//         console.log(potion.name);
-//         console.log(
-//           `Error! Potion ${newPotion.name} is already in your inventory!`,
-//         );
-//         return `Error! Potion ${newPotion.name} is already in your inventory!`;
-//       }
-//     }
-//     this.potions.push(newPotion);
-//     console.log(newPotion);
-//   },
-//   removePotion(potionName) {
-//     for (const potion of this.potions) {
-//       if (potion.name === potionName) {
-//         // if (this.potions.includes(potion)) {
-//         const potionIndex = this.potions.indexOf(potion);
-//         console.log(this.potions.splice(potionIndex, 1));
-//         return this.potions.splice(potionIndex, 1);
-//       }
-//       // }
-//     }
-//     return `Potion ${potionName} is not in inventory!`;
-//   },
-//   updatePotionName(oldName, newName) {
-//     for (const potion of this.potions) {
-//       if (potion.name === oldName) {
-//         potion.name = newName;
-//       }
-//     }
-//   },
-//   // Change code above this line
-// };
-
-// atTheOldToad.getPotions();
-// atTheOldToad.addPotion({ name: 'Invisibility', price: 620 });
-// atTheOldToad.addPotion({ name: 'Power potion', price: 270 });
-// atTheOldToad.addPotion({ name: 'Dragon breath', price: 700 });
-// atTheOldToad.addPotion({ name: 'Stone skin', price: 240 });
-// atTheOldToad.removePotion('Dragon breath');
-// atTheOldToad.removePotion('Speed potion');
-// atTheOldToad.updatePotionName('Dragon breath', 'Polymorth');
-// Колбек-функція
-// function deliverPizza(pizzaName) {
-//   return `Delivering ${pizzaName} pizza.`;
-// }
-
-// function makePizza(pizzaName) {
-//   return `Pizza ${pizzaName} is being prepared, please wait...`;
-// }
-
-// // Chande code below this line
-// function makeMessage(pizzaName, callback) {
-//   return callback(pizzaName, deliverPizza);
-// }
-// makeMessage('Royal Grand', makePizza);
-
-// makeMessage('Ultracheese', deliverPizza);
-// console.log(makeMessage('Royal Grand', deliverPizza));
-
-// function makePizza(pizzaName, callback) {
-//   console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
-//   callback(pizzaName);
-// }
-
-// makePizza('Royal Grand', function deliverPizza(pizzaName) {
-//   console.log(`Delivering pizza ${pizzaName}.`);
-// });
-// // Change code below this line
-
-// makePizza('Ultracheese');
-
-// function makePizza(pizzaName, callback) {
-//   console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
-//   callback(pizzaName);
-// }
-
-// makePizza('Royal Grand', function deliverPizza(pizzaName) {
-//   console.log(`Delivering pizza ${pizzaName}.`);
-// });
-// // Change code below this line
-// makePizza('Ultracheese', function eatPizza(pizzaName) {
-//   console.log(`Eating pizza ${pizzaName}`);
-// });
-// makePizza('Ultracheese');
-
-// const pizzaPalace = {
-//   pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
-//   order(pizzaName, makePizza, onOrderError) {
-//     if (this.pizzas.includes(pizzaName)) {
-//       makePizza(pizzaName);
-//       console.log(`Your order is accepted. Cooking pizza ${pizzaName}.`);
-//     } else {
-//       let error = `There is no pizza with a name ${pizzaName} in the assortment.`;
-//       onOrderError(error);
-//       console.log(`Error! ${error}`);
-//       // onOrderError(pizzaName);
-
-//       return `"There is no pizza with a name ${pizzaName} in the assortment."`;
-//     }
-//   },
-// };
-// // Change code above this line
-
-// // Callback for onSuccess
-// function makePizza(pizzaName) {
-//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
-// }
-
-// // Callback for onError
-// function onOrderError(error) {
-//   return `Error! ${error}`;
-// }
-
-// Method calls with callbacks
-// pizzaPalace.order('Smoked', makePizza, onOrderError);
-// pizzaPalace.order('Four meats', makePizza, onOrderError);
-// pizzaPalace.order('Big Mike', makePizza, onOrderError);
-// pizzaPalace.order('Vienna', makePizza, onOrderError);
-
-// const pizzaPalace = {
-//   pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
-//   order(pizzaName, makePizza, onOrderError) {
-//     if (!this.pizzas.includes(pizzaName)) {
-//       let error = `There is no pizza with a name ${pizzaName} in the assortment.`;
-//       onOrderError(error);
-//     } else {
-//       makePizza(pizzaName);
-//     }
-//   },
-// };
-// // Change code above this line
-
-// // Callback for onSuccess
-// function makePizza(pizzaName) {
-//   console.log(`Your order is accepted. Cooking pizza ${pizzaName}.`);
-//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
-// }
-
-// // Callback for onError
-// function onOrderError(error) {
-//   console.log(`Error! ${error}`);
-//   return `Error! ${error}`;
-// }
-
-// Method calls with callbacks
-// pizzaPalace.order('Smoked', makePizza, onOrderError);
-// pizzaPalace.order('Four meats', makePizza, onOrderError);
-// pizzaPalace.order('Big Mike', makePizza, onOrderError);
-// pizzaPalace.order('Vienna', makePizza, onOrderError);
-// const numbers = [5, 10, 15, 20, 25];
-// // for (let i = 0; i < numbers.length; i++) {
-// //   console.log(`Індекс ${i}, значення ${numbers[i]}`);
-// // }
-
-// numbers.forEach(function (number, index) {
-//   console.log(`Індекс ${index}, значення ${number}`);
-// });
-
-// function calculateTotalPrice(orderedItems) {
-//   let totalPrice = 0;
-//   // Change code below this line
-
-//   orderedItems.forEach(function calculateTotalPrice(orderedItems) {
-//     totalPrice += orderedItems;
-//   });
-
-//   // Change code above this line
-//   console.log(totalPrice);
-//   return totalPrice;
-// }
-// calculateTotalPrice([12, 85, 37, 4]);
-// calculateTotalPrice([164, 48, 291]);
-// calculateTotalPrice([412, 371, 94, 63, 176]);
-
-// const numbers = [5, 10, 15, 20, 25];
-
-// numbers.forEach(function (number) {
-//   console.log('number', number);
-// });
-
-// console.log(numbers);
-// function filterArray(numbers, value) {
-//   const filteredNumbers = [];
-//   // Change code below this line
-
-//   numbers.forEach(function filterArray(numbers, value) {
-//     if (numbers > value) {
-//       filteredNumbers.push.numbers;
-//     }
-//   });
-
-//   // Change code above this line
-//   console.log(filteredNumbers);
-//   return filteredNumbers;
-// }
-// filterArray([1, 2, 3, 4, 5], 3);
-
-// const filter = function (array, test) {
-//   const filteredArray = [];
-
-//   for (const el of array) {
-//     console.log(el);
-
-//     const passed = test(el);
-//     if (passed) {
-//       filteredArray.push(el);
-//     }
-//   }
-//   return filteredArray;
-// };
-
-// const callback1 = function (value) {
-//   return value >= 3;
-// };
-// const r1 = filter([1, 2, 3, 4, 5], callback1);
-// console.log(r1);
-
-// const r2 = filter([1, 2, 3, 4, 5, 6, 7, 8]);
-// console.log(r2);
-
-//1. Напишите две функции
-// letMeSeeYourName(callback) - спрашивает имя пользователя
-//через prompt и вызывает callback функцию
-//greet(name) - коллбек принимающий имя и логирующий в консоль
-//строку "Привет <name>"
-//Реализуй проверку, что prompt не пустой
-// letMeSeeYourName(greet);
-
-// function letMeSeeYourName(callback) {
-//   const answer = prompt('введіть імя користувача');
-//   if (!answer) return;
-//   callback(answer);
-// }
-// function greet(name) {
-//   console.log(`Привіт ${name}`);
-// }
-
-//2. Напишите две функции
-//makeProduct(name, price, callback) - принимает
-//имя и цену товара, а так же callback.
-//Функция создает объект товара, добавляя ему уникальный
-//идентификатор в свойство id и вызывает callback
-//передавая ему созданный объект.
-//showProduct(product) - коллбек принимающий объект
-//продукта и логирующий его в консоль
-
-// function makeProduct(name, price, callback) {
-//   const id = Math.random();
-//   const product = {
-//     id,
-//     price,
-//     name,
-//   };
-//   callback(product);
-// }
-
-// function showProduct(product) {
-//   console.log(product);
-// }
-
-// makeProduct('apple', 10, showProduct);
-// multiply;
-
-//6. Напишите функцию each(array, callback), которая
-//первым параметром принимает массив, а вторым - функцию,
-//которая применится к каждому элементу массива.
-//Функция each должна вернуть новый массив, элементами
-//которого будут результаты вызова callback
-//callback функци должна умножать элементы на 2
-
-// const array = [3, 5, 6, 34, 8, 83, 12, 34];
-// const result = [];
-// function each(array, callback) {
-//   for (const element of array) {
-//     result.push(callback(element));
-//   }
-//   return result;
-// }
-
-// function multiply(element) {
-//   return element * 2;
-// }
-// console.log(each(array, multiply));
-// function filterArray(numbers, value) {
-//   const filteredNumbers = [];
-//   // Change code below this line
-//   numbers.forEach(function filterArray(number) {
-//     if (number > value) {
-//       filteredNumbers.push(number);
-//     }
-//   });
-
-//   // for (let i = 0; i < numbers.length; i += 1) {
-//   //   if (numbers[i] > value) {
-//   //     filteredNumbers.push(numbers[i]);
-//   //   }
-//   // }
-
-//   // Change code above this line
-//   console.log(filteredNumbers);
-//   return filteredNumbers;
-// }
-// filterArray([1, 2, 3, 4, 5], 3);
-
-// function getCommonElements(firstArray, secondArray) {
-//   const commonElements = [];
-//   // Change code below this line
-//   firstArray.forEach(function getCommonElements(element) {
-//     if (secondArray.includes(element)) {
-//       commonElements.push(element);
-//     }
-//   });
-
-//     console.log(commonElements);
-//   return commonElements;
-//   // Change code above this line
-// }
-// getCommonElements([1, 2, 3], [2, 4]);
-
-// const totalPrice = (quantity, pricePerItem) => {
-//   // Change code above this line
-
-//   return quantity * pricePerItem;
-// };
-// totalPrice(5, 100);
-
-// Change code below this line
-// const calculateTotalPrice = orderedItems => {
-//   let totalPrice = 0;
-
-//   orderedItems.forEach(item => {
-//     totalPrice += item;
-//   });
-//   console.log(totalPrice);
-//   return totalPrice;
-// };
-// // Change code above this line
-// calculateTotalPrice([12, 85, 37, 4]);
-
-// function changeEven(numbers, value) {
-//   // Change code below this line
-//   let newArray = [];
-
-//   numbers.forEach(element => {
-//     if (element % 2 === 0) {
-//       newArray.push(element + value);
-//     }
-//   });
-//   console.log(newArray);
-//   return newArray;
-//   // Change code above this line
-// }
-// changeEven([1, 2, 3, 4, 5], 10);
-
-// const planets = ['Earth', 'Mars', 'Venus', 'Jupiter'];
-// // Change code below this line
-// const planetsLengths = planets.map(planet => planet.length);
-// console.log(planetsLengths);
-
-// const books = [
-//   {
-//     title: 'The Last Kingdom',
-//     author: 'Bernard Cornwell',
-//     rating: 8.38,
-//   },
-//   {
-//     title: 'Beside Still Waters',
-//     author: 'Robert Sheckley',
-//     rating: 8.51,
-//   },
-//   {
-//     title: 'The Dream of a Ridiculous Man',
-//     author: 'Fyodor Dostoevsky',
-//     rating: 7.75,
-//   },
-//   { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
-//   { title: 'Enemy of God', author: 'Bernard Cornwell', rating: 8.67 },
-// ];
-// // Change code below this line
-
-// const titles = books.map(book => book.title);
-// console.log(titles);
-
-// const books = [
-//   {
-//     title: 'The Last Kingdom',
-//     author: 'Bernard Cornwell',
-//     genres: ['adventure', 'history'],
-//   },
-//   {
-//     title: 'Beside Still Waters',
-//     author: 'Robert Sheckley',
-//     genres: ['fiction'],
-//   },
-//   {
-//     title: 'Redder Than Blood',
-//     author: 'Tanith Lee',
-//     genres: ['horror', 'mysticism'],
-//   },
-// ];
-// // Change code below this line
-
-// const genres = books.flatMap(book => book.genres);
-// console.log(genres);
-
-// Change code below this line
-// let getUserNames = users => {
-//   getUserNames.map.users.name;
-// };
-// Change code above this line
-// function getUserNames(users)
-
-// const books = [
-//   {
-//     title: 'The Last Kingdom',
-//     author: 'Bernard Cornwell',
-//     genres: ['adventure', 'history'],
-//   },
-//   {
-//     title: 'Beside Still Waters',
-//     author: 'Robert Sheckley',
-//     genres: ['fiction', 'mysticism'],
-//   },
-//   {
-//     title: 'Redder Than Blood',
-//     author: 'Tanith Lee',
-//     genres: ['horror', 'mysticism', 'adventure'],
-//   },
-// ];
-// // Change code below this line
-// const allGenres = books.flatMap(book => book.genres);
-// const uniqueGenres = allGenres.filter(
-//   (genres, index, array) => array.indexOf(genres) === index,
-// );
-
-// Change code below this line
-// const getUsersWithEyeColor = (users, color) => {
-//   users.filter(user => user.eyeColor === color);
-
-//   console.log(users.filter(user => user.eyeColor === color));
-//   return users.filter(user => user.eyeColor === color);
-//   // Change code above this line
-// };
-
-//
-
-// const getFriends = users => {
-//   return users
-//     .flatMap(user => user.friends)
-//     .filter((friends, index, array) => array.indexOf(friends) === index);
-// };
-
-// console.log(
-//   users
-//     .flatMap(user => user.friends)
-//     .filter((friends, index, array) => array.indexOf(friends) === index),
-// );
-
-// Change code below this line
-// const getUsersWithEyeColor = (users, color) => {
-//   users.filter(user => user.eyeColor === color);
-
-//   console.log(users.filter(user => user.eyeColor === color));
-//   return users.filter(user => user.eyeColor === color);
-//   // Change code above this line
-// };
-// const allFriends = users.flatMap(user => user.friends);
-// const getFriends = allFriends.filter(
-//   (friends, index, array) => array.indexOf(friends) === index,
-// );
-// return getFriends;
-// const getFriends = (users) => users.flatMap(user => user.friends) =
-//   users.filter((friends, index, array) => array.indexOf(friends) === index);
-
-const books = [
-  {
-    title: 'The Last Kingdom',
-    author: 'Bernard Cornwell',
-    rating: 8.38,
+const atTheOldToad = {
+  potions: [
+    { name: 'Speed potion', price: 460 },
+    { name: 'Dragon breath', price: 780 },
+    { name: 'Stone skin', price: 520 },
+  ],
+  // Change code below this line
+  getPotions() {
+    let thisPotions = [];
+    for (let i = 0; i < this.potions.length; i++) {
+      thisPotions = this.potions[i];
+      // console.log(thisPotions);
+    }
+    return thisPotions;
   },
-  {
-    title: 'Beside Still Waters',
-    author: 'Robert Sheckley',
-    rating: 8.51,
-  },
-  {
-    title: 'The Dream of a Ridiculous Man',
-    author: 'Fyodor Dostoevsky',
-    rating: 7.75,
-  },
-  { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
-];
-const BOOK_TITLE = 'The Dream of a Ridiculous Man';
-const AUTHOR = 'Robert Sheckley';
-// Change code below this line
+  addPotion(newPotion) {
+    // let thisPotions = [];
+    // for (let i = 0; i < this.potions.length; i++) {
+    //   thisPotions = this.potions[i];
+    let addPotions = this.potions;
+    for (const potion of addPotions) {
+      if (potion === newPotion) {
+        console.log(newPotion);
+        console.log`Error! Potion ${newPotion} is already in your inventory!`;
+        return `Error! Potion ${newPotion} is already in your inventory!`;
+      }
 
-const bookWithTitle = books.find(book => book.title === BOOK_TITLE);
-const bookByAuthor = books.find(book => book.author === AUTHOR);
-console.log(bookWithTitle);
+      // this.addPotion.push(newPotion);
+    }
+    // console.log(thisPotions);
+  },
+  removePotion(potionName) {
+    const potionIndex = this.potions.indexOf(potionName);
+
+    if (potionIndex === -1) {
+      return `Potion ${potionName} is not in inventory!`;
+    }
+
+    this.potions.splice(potionIndex, 1);
+  },
+  updatePotionName(oldName, newName) {
+    const potionIndex = this.potions.indexOf[`oldName`];
+
+    if (potionIndex === -1) {
+      return `Potion ${oldName} is not in inventory!`;
+    }
+
+    this.potions.splice[`potionIndex, 1, newName`];
+    // console.log(atTheOldToad.thisPotions);
+  },
+  // Change code above this line
+};
+atTheOldToad.updatePotionName('Stone skin', 'Invulnerability potion');
+atTheOldToad.getPotions();
+atTheOldToad.addPotion({ name: 'Invisibility', price: 620 });
+atTheOldToad.addPotion({ name: 'Power potion', price: 270 });
+atTheOldToad.addPotion({ name: 'Dragon breath', price: 700 });
+atTheOldToad.addPotion({ name: 'Stone skin', price: 240 });
+atTheOldToad.removePotion('Dragon breath');
+atTheOldToad.removePotion('Speed potion');
+atTheOldToad.updatePotionName('Dragon breath', 'Polymorth');
